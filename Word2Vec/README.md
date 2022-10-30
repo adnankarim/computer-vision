@@ -3,7 +3,6 @@
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1fCasLme2X2MYec600yfIn7R1Oq-31SbO?authuser=1#scrollTo=ejl-98Iv8QLF)
 
 
-
 In this notebook, I'll lead you through using PyTorch to implement the [Word2Vec algorithm](https://en.wikipedia.org/wiki/Word2vec) using the skip-gram architecture. By implementing this, you'll learn about embedding words for use in natural language processing. This will come in handy when dealing with things like machine translation.
 
 ## Readings
@@ -32,3 +31,24 @@ Instead of doing the matrix multiplication, we use the weight matrix as a lookup
 There is nothing magical going on here. The embedding lookup table is just a weight matrix. The embedding layer is just a hidden layer. The lookup is just a shortcut for the matrix multiplication. The lookup table is trained just like any weight matrix.
 
 Embeddings aren't only used for words of course. You can use them for any model where you have a massive number of classes. A particular type of model called **Word2Vec** uses the embedding layer to find vector representations of words that contain semantic meaning.
+
+
+---
+## Word2Vec
+
+The Word2Vec algorithm finds much more efficient representations by finding vectors that represent the words. These vectors also contain semantic information about the words.
+
+<img src="assets/context_drink.png" width=40%>
+
+Words that show up in similar **contexts**, such as "coffee", "tea", and "water" will have vectors near each other. Different words will be further away from one another, and relationships can be represented by distance in vector space.
+
+<img src="assets/vector_distance.png" width=40%>
+
+
+There are two architectures for implementing Word2Vec:
+>* CBOW (Continuous Bag-Of-Words) and 
+* Skip-gram
+
+<img src="assets/word2vec_architectures.png" width=60%>
+
+In this implementation, we'll be using the **skip-gram architecture** because it performs better than CBOW. Here, we pass in a word and try to predict the words surrounding it in the text. In this way, we can train the network to learn representations for words that show up in similar contexts.
