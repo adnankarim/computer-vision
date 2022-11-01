@@ -33,7 +33,6 @@ There is nothing magical going on here. The embedding lookup table is just a wei
 Embeddings aren't only used for words of course. You can use them for any model where you have a massive number of classes. A particular type of model called **Word2Vec** uses the embedding layer to find vector representations of words that contain semantic meaning.
 
 
----
 ## Word2Vec
 
 The Word2Vec algorithm finds much more efficient representations by finding vectors that represent the words. These vectors also contain semantic information about the words.
