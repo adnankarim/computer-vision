@@ -6,4 +6,4 @@ Counting Vehicles using openCV with the help of Morphological Operations, Segmen
 
 ##  Result
 
-![Image]('./images/res.png)
+![alt text](/images/res.png)
