@@ -2,7 +2,7 @@
 
 # Vehicle Count using OpenCV
 
-Counting Vehicles using openCV with the help of Morphological Operations, Segmentation Algorithms & other image manipulation techniques. 
+Counting Vehicles using openCV with the help of Morphological Operations, Segmentation Algorithm & other image manipulation techniques. 
 
 ##  Result
 
